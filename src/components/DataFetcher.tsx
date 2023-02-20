@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import axios, { AxiosResponse, AxiosError } from "axios";
+import axios, { AxiosResponse } from "axios";
 
 type Recipe = {
   title: string;
@@ -45,7 +45,16 @@ const DataFetcher: React.FC<RecipeSearchProps> = ({ parameters }) => {
     fetchData();
   }, [parameters]);
 
-  return <div>DataFetcher</div>;
+  return (
+    <div>
+      {recipes.map((recipe) => (
+        <div key={recipe.title}>
+          <h2>{recipe.title}</h2>
+          <img src={recipe.image} alt={recipe.title} />
+        </div>
+      ))}
+    </div>
+  );
 };
 
 export default DataFetcher;
