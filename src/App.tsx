@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <DataFetcher />
+      <DataFetcher query={"cheese"} />
       <Hero />
     </>
   );
