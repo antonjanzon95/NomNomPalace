@@ -1,5 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios, { AxiosResponse, AxiosError } from "axios";
+
+type Recipe = {
+  title: string;
+  image: string;
+  readyInMinutes: number;
+  servings: number;
+  sourceUrl: string;
+};
+
+type ResponseData = {
+  results: Recipe[];
+};
 
 interface RecipeSearchProps {
   parameters: {
