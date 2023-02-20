@@ -3,16 +3,16 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
-    <header className="w-screen">
-      <nav className="container">
-        <ul>
-          <li>
+    <header className="w-screen bg-emerald-700">
+      <nav className="container flex justify-center items-center">
+        <ul className="flex gap-8 p-2 text-gray-100">
+          <li className="hover:text-gray-400">
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li className="hover:text-gray-400">
             <Link to="/about">About</Link>
           </li>
-          <li>
+          <li className="hover:text-gray-400">
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
