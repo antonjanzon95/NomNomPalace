@@ -1,4 +1,5 @@
 import React from "react";
+import DataFetcher from "./DataFetcher";
 
 const Hero = () => {
   return (
@@ -17,6 +18,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <DataFetcher query={"cheese"} />
     </main>
   );
 };
