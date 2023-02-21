@@ -23,11 +23,11 @@ const DataFetcher: React.FC<RecipeProps> = ({ query }) => {
   }, []);
 
   return (
-    <div className="flex items-center flex-col p-6">
+    <div className="flex items-center flex-col py-6">
       {recipes.map((recipe) => (
         <div
           key={recipe.id}
-          className="h-30 w-80 flex gap-10 mb-10 justify-between items-center outline p-4"
+          className="h-30 w-80 flex gap-10 mb-10 justify-between items-center p-4 shadow-md bg-slate-50"
         >
           <h2>{recipe.title}</h2>
           <img src={recipe.image} alt={recipe.title} className="h-20 w-20" />
