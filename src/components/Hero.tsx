@@ -10,9 +10,11 @@ const Hero = () => {
   };
 
   return (
-    <main className="h-screen w-screen bg-amber-50">
-      <div className="container flex flex-col items-center pt-10 gap-6">
-        <h1 className="text-2xl">Nom Nom Palace</h1>
+    <main className="w-screen bg-slate-100">
+      <div className="mx-auto container flex flex-col items-center pt-10 gap-6">
+        <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-emerald-900">
+          Nom Nom Palace
+        </h1>
         <SearchForm onSubmit={handleSearch} />
       </div>
       {query && <DataFetcher query={query} key={query} />}
