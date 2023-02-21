@@ -15,10 +15,10 @@ const DataFetcher: React.FC<RecipeProps> = ({ query }) => {
 
   useEffect(() => {
     fetch(
-      `https://api.spoonacular.com/food/products/search?query=${query}&apiKey=e1fcb73082d845f8a97b44215050d307`
+      `https://api.spoonacular.com/recipes/complexSearch?query=${query}&number=5&apiKey=e1fcb73082d845f8a97b44215050d307`
     )
       .then((response) => response.json())
-      .then((res) => setRecipes(res.products))
+      .then((res) => setRecipes(res.results))
       .catch((error) => console.error(error));
   }, []);
 
