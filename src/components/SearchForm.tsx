@@ -7,9 +7,14 @@ const SearchForm: React.FC = () => {
     setSearchQuery(e.target.value);
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(searchQuery);
+  };
+
   return (
     <div>
-      <form action="submit">
+      <form onSubmit={handleSubmit}>
         <label htmlFor="query">Search for a recipe:</label>
         <input
           type="text"
