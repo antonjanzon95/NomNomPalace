@@ -23,6 +23,7 @@ const SearchForm: React.FC = () => {
           value={searchQuery}
           onChange={handleChange}
         />
+        <button type="submit">Search</button>
       </form>
     </div>
   );
