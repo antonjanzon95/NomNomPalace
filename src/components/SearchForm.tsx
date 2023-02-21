@@ -20,20 +20,24 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSubmit }) => {
     <div>
       <form
         onSubmit={handleSubmit}
-        className="h-36 bg-amber-200 border-solid border-2 border-emerald-700 flex flex-col justify-center items-center gap-3"
+        className="w-80 p-6 shadow-lg bg-slate-50 flex flex-col justify-center items-center gap-6"
       >
-        <label htmlFor="query">Search for a recipe:</label>
-        <input
-          className="border-2 rounded border-black"
-          type="text"
-          id="query"
-          name="query"
-          value={searchQuery}
-          onChange={handleChange}
-        />
+        <div className="flex flex-col items-center gap-2">
+          <label htmlFor="query" className="text-lg">
+            Search for a recipe:
+          </label>
+          <input
+            className="border-solid border-slate-900 border-[1px] p-1"
+            type="text"
+            id="query"
+            name="query"
+            value={searchQuery}
+            onChange={handleChange}
+          />
+        </div>
         <button
           type="submit"
-          className="border-solid border-black border-2 px-2 bg-gradient-to-r from-emerald-200 to-emerald-500"
+          className="w-36 h-12 text-2xl font-extrabold border-2 border-slate-900 rounded px-2 bg-gradient-to-r from-emerald-200 to-emerald-500"
         >
           Search
         </button>
