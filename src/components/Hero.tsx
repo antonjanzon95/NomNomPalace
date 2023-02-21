@@ -15,7 +15,7 @@ const Hero = () => {
         <h1 className="text-2xl">Nom Nom Palace</h1>
         <SearchForm onSubmit={handleSearch} />
       </div>
-      <DataFetcher query={"cheese"} />
+      {query && <DataFetcher query={query} key={query} />}
     </main>
   );
 };
