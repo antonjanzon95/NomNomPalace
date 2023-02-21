@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 
-const SearchForm: React.FC = () => {
+interface SearchFormProps {
+  onSubmit: (searchQuery: string) => void;
+}
+
+const SearchForm: React.FC<SearchFormProps> = ({ onSubmit }) => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -9,7 +13,7 @@ const SearchForm: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(searchQuery);
+    onSubmit(searchQuery);
   };
 
   return (
