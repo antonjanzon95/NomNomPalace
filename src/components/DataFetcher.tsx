@@ -23,7 +23,7 @@ const DataFetcher: React.FC<RecipeProps> = ({ query }) => {
   }, []);
 
   return (
-    <div className="flex items-center flex-col py-6">
+    <div className="flex items-center flex-col py-6 m-h-screen">
       {recipes.map((recipe) => (
         <div
           key={recipe.id}

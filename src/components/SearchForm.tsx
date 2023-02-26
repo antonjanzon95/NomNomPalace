@@ -37,7 +37,10 @@ const SearchForm: React.FC<SearchFormProps> = ({ onSubmit }) => {
         </div>
         <button
           type="submit"
-          className="w-36 h-12 text-2xl font-extrabold border-2 border-slate-900 rounded px-2 bg-gradient-to-r from-emerald-200 to-emerald-500 hover:from-emerald-500 hover:to-emerald-700"
+          className="
+          w-36 h-12 text-2xl font-extrabold border-2 border-slate-900 
+          rounded px-2 bg-gradient-to-r from-emerald-200 to-emerald-500
+           hover:from-emerald-500 hover:to-emerald-700"
         >
           Search
         </button>
