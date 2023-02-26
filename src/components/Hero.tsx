@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <main className="w-screen min-h-screen bg-slate-200">
       <div className="mx-auto container flex flex-col items-center pt-10 gap-6">
-        <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-emerald-900">
+        <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-emerald-500 to-emerald-900">
           Nom Nom Palace
         </h1>
         <SearchForm onSubmit={handleSearch} />
